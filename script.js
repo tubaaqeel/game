@@ -12,18 +12,6 @@ var scores = new Array();
 	scores['X'] = 0;
 	scores['Y'] = 0;
 
-// Resetting parameters on reseting game
-function resetParams() {
-	turn = 'X';
-	game_type = [];
-	total_turns = 0;
-	finished = false;
-
-	selections['X'] = new Array();
-	selections['Y'] = new Array();
-}
-
-
 // Change turn after another
 function changeTurn(){
 	if (turn == 'X') turn = 'Y';
