@@ -17,7 +17,6 @@ function resetParams() {
 	turn = 'X';
 	game_type = 3;
 	total_turns = 0;
-	robot = true;
 	finished = false;
 
 	selections['X'] = new Array();
@@ -185,9 +184,6 @@ function markCheck(obj){
 
 	checkWinner();
 	changeTurn();
-
-	// if auto player selected
-	if (robot===true) autoTurn();
 }
 
 
@@ -199,9 +195,6 @@ function getAutoTurnPattern() {
 	pattern = getMostNearestPattern('Y');
 	if (pattern.length <= 0) {
 		pattern = getMostNearestPattern('X');
-		if (pattern.length <= 0) {
-			pattern = DefaultRobotPatterns();
-		}
 	}
 
 	return pattern;
